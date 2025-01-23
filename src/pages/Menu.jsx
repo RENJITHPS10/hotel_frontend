@@ -38,21 +38,22 @@ const Menu = () => {
         </div>
       </div>
       <div className="shadow-lg text-white w-full py-6 px-4" style={{ backgroundImage: 'url(/frame1.png)' }}>
-        <div className="flex justify-center space-x-4 overflow-x-auto scrollbar-hide px-2">
-          {menus.map((menu) => (
-            <div
-              key={menu._id}
-              className="flex-shrink-0 w-28 sm:w-32 md:w-48 text-white p-2 sm:p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <button
-                onClick={() => handleMenuClick(menu._id)}
-                className="w-full text-sm sm:text-lg md:text-xl bg-black font-semibold text-white hover:bg-blue-600 hover:text-white py-2 px-4 rounded-md focus:outline-none transition-colors duration-200 border-2 border-blue-700"
-              >
-                {menu.name}
-              </button>
-            </div>
-          ))}
-        </div>
+      <div className="flex justify-start space-x-4 overflow-x-auto scrollbar-hide px-2 py-2">
+  {menus.map((menu) => (
+    <div
+      key={menu._id}
+      className="flex-shrink-0 w-28 sm:w-32 md:w-48 lg:w-60 text-white p-2 sm:p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+    >
+      <button
+        onClick={() => handleMenuClick(menu._id)}
+        className="w-full text-sm sm:text-lg md:text-xl bg-black font-semibold text-white hover:bg-blue-600 hover:text-white py-2 px-4 rounded-md focus:outline-none transition-colors duration-200 border-2 border-blue-700"
+      >
+        {menu.name}
+      </button>
+    </div>
+  ))}
+</div>
+
 
         {/* Show the menu details below */}
         {selectedMenu && (
