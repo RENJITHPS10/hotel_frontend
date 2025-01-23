@@ -12,42 +12,40 @@ const Home = () => {
   const handleCloseMenuModal = () => setShowAddMenuModal(false);
 
   const handleAddMenuItem = () => {
-    setShowAddMenuItemModal(true); // Show modal to add menu item
+    setShowAddMenuItemModal(true); 
   };
 
   const handleCloseMenuItemModal = () => setShowAddMenuItemModal(false);
 
   return (
-    <div className="min-h-screen bg-gray-900 p-6">
-      <div className="max-w-4xl mx-auto bg-gray-800 rounded-lg shadow-lg p-8">
-        <div className="mb-6 text-center">
-          <h1 className="text-3xl font-bold text-white">Menu Management</h1>
-        </div>
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="bg-gray-800 p-10 rounded-lg shadow-lg">
+        <h1 className="text-3xl font-bold text-white mb-8 text-center">
+          Menu Management
+        </h1>
 
-        <div className="mb-6 flex justify-center items-center space-x-4">
+        <div className="flex justify-center space-x-4 mb-8">
           <button
             onClick={handleAddMenu}
-            className="px-6 py-2 bg-indigo-500 text-white font-medium rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="px-6 py-3 bg-indigo-500 text-white font-medium rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           >
             Add Menu
           </button>
 
           <button
             onClick={handleAddMenuItem}
-            className="px-6 py-2 bg-green-500 text-white font-medium rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="px-6 py-3 bg-green-500 text-white font-medium rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
           >
             Add Menu Item
           </button>
         </div>
 
-        <div className="flex justify-center items-center  ">
-          <Link
-            to="/menu"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Go To Menu Page
-          </Link>
-        </div>
+        <Link
+          to="/menu"
+          className="block text-center text-white bg-blue-500 hover:bg-blue-700 rounded-md py-3 px-6"
+        >
+          Go To Menu Page
+        </Link>
       </div>
 
       {/* Add Menu Modal */}
@@ -58,7 +56,6 @@ const Home = () => {
       {/* Add Menu Item Modal */}
       {showAddMenuItemModal && (
         <AddMenuItemModal
-
           closeModal={handleCloseMenuItemModal}
           setSelectedMenuId={setSelectedMenuId}
           selectedMenuId={selectedMenuId}

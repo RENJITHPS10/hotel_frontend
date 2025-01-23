@@ -10,7 +10,7 @@ const AddMenuItemModal = ({closeModal, setSelectedMenuId, selectedMenuId }) => {
   const [itemPrice, setItemPrice] = useState('');
 
   useEffect(() => {
-    // Fetch the list of menus only when the modal opens
+    
     const fetchMenusFromServer = async () => {
       try {
         const response = await axios.get(`${serverUrl}/menus`);
@@ -31,13 +31,13 @@ const AddMenuItemModal = ({closeModal, setSelectedMenuId, selectedMenuId }) => {
     try {
       await axios.post(`${serverUrl}/menu-items`, {
         name: menuItem,
-        description: itemDescription,  // Send description now
+        description: itemDescription,  
         price: itemPrice,
-        menuId: selectedMenuId, // Send menuId to associate item with menu
+        menuId: selectedMenuId, 
       });
 
       
-      closeModal();  // Close the modal
+      closeModal();  
     } catch (error) {
       console.error('Error adding menu item:', error);
     }

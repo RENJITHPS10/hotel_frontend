@@ -15,9 +15,9 @@ const Header = () => {
     <>
       <div className="bg-black w-full ">
         <div className="flex justify-between items-center">
-          <div className='flex justify-center items-center'>
-            <img src="/logo.png" alt="" className="w-16 h-16"  />
-            <p className='text-white text-xl'>DEEPNET SOLUTIONS</p>
+          <div className='flex justify-center items-center p-3'>
+            <img src="/logo.png" alt="" className="w-14 h-14"  />
+            <p className='text-white text-xl ms-3'>DEEPNET SOLUTIONS</p>
           </div>
           <div className="justify-center text-white items-center text-sky font-bold text-xl hidden md:flex">
             <Link to={'/'} className="mx-10">Home</Link>
