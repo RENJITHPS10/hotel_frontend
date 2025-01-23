@@ -37,14 +37,14 @@ const Header = () => {
         ref={menuRef}
       >
         <div className="p-5">
-          <Link to={'/'} className="text-white text-lg block mb-4">
+          <Link to={'/'} className="text-white text-lg block mb-4" onClick={toggleMenu}>
             Home
           </Link>
-          <Link to={'/menu'} className="text-white text-lg block mb-4">
+          <Link to={'/menu'} className="text-white text-lg block mb-4" onClick={toggleMenu}>
             Menu
           </Link>
-          <Link to={'/reservation'} className="text-lg block mb-4 text-white ">Make a Reservation</Link>
-          <Link to={'/contact'} className="text-lg block mb-4 text-white ">Contact Us</Link>
+          <Link to={'/reservation'} className="text-lg block mb-4 text-white " onClick={toggleMenu}>Make a Reservation</Link>
+          <Link to={'/contact'} className="text-lg block mb-4 text-white " onClick={toggleMenu}>Contact Us</Link>
         </div>
       </div>
     </>
